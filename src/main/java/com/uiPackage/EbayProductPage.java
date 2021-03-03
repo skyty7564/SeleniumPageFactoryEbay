@@ -23,15 +23,30 @@ public class EbayProductPage extends Utility {
 
 	private HashSet<EbayProductModel> products = new HashSet<EbayProductModel>();
 	
+	public List<WebElement> getPrice()
+	{
+		List<WebElement> priceOfProduct = driver.findElements(By.className("s-item__price"));	
+		return priceOfProduct;
+		
+	}
+	public List<WebElement> getName()
+	{
+		List<WebElement> listOfProduct = driver.findElements(By.className("s-item__title"));
+		return listOfProduct;
+		
+	}
 	
 	public void getProduct()
 	{
+		
+		List<WebElement> priceOfProduct = getPrice();
+		List<WebElement> listOfProduct = getName();
 	
-		List<WebElement> listOfProduct = driver.findElements(By.className("s-item__title"));
-		List<WebElement> priceOfProduct = driver.findElements(By.className("s-item__price"));	
 	
+
 		for (int i = 0; i < listOfProduct.size() ; i++ )
 		{
+			
 			String description = listOfProduct.get(i).getText();
 			String price = priceOfProduct.get(i).getText();
 			EbayProductModel prod = new EbayProductModel();
@@ -41,8 +56,10 @@ public class EbayProductPage extends Utility {
 		}
 		
 	}
+	
 	public void displayProduct()
 	{
+		
 		System.out.println("Item Info");
 		for(EbayProductModel prod : products)
 		{
