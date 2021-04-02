@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserSelector {
@@ -23,8 +24,12 @@ public class BrowserSelector {
 			{
 				
 				System.setProperty("webdriver.chrome.driver",  path+"/drivers/chromedriver_win32/chromedriver.exe");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless","--window-size=1920,1200");
 		//	System.setProperty("webdriver.chrome.driver",  path+"\\drivers\\chromedriver_win32\\chromedriver.exe");
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
+				
+				
 			}
 			else if(browserName.equalsIgnoreCase("firefox"))
 			{
