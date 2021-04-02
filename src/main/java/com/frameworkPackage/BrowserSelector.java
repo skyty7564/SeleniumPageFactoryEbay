@@ -23,7 +23,7 @@ public class BrowserSelector {
 			if(browserName.equalsIgnoreCase("chrome"))
 			{
 				
-				System.setProperty("webdriver.chrome.driver",  path+"/drivers/chromedriver_linux64/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",  path+"/drivers/chromedriver_linux64/chromedriver");
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless","--window-size=1920,1200");
 		//	System.setProperty("webdriver.chrome.driver",  path+"\\drivers\\chromedriver_win32\\chromedriver.exe");
