@@ -1,4 +1,6 @@
 com\frameworkPackage\BrowserSelector.class
+com\frameworkPackage\MainEntry.class
 com\uiPackage\EbayHomePage.class
 com\uiPackage\EbayProductPage.class
+com\model\EbayProductModel.class
 com\frameworkPackage\Utility.class
