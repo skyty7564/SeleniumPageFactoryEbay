@@ -21,7 +21,9 @@ public class BrowserSelector {
 		{
 			if(browserName.equalsIgnoreCase("chrome"))
 			{
-			System.setProperty("webdriver.chrome.driver",  path+"\\drivers\\chromedriver_win32\\chromedriver.exe");
+				
+				System.setProperty("webdriver.chrome.driver",  path+"/drivers/chromedriver_win32/chromedriver.exe");
+		//	System.setProperty("webdriver.chrome.driver",  path+"\\drivers\\chromedriver_win32\\chromedriver.exe");
 				driver = new ChromeDriver();
 			}
 			else if(browserName.equalsIgnoreCase("firefox"))
