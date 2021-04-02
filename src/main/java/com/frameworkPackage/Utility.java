@@ -17,7 +17,6 @@ public class Utility {
 	}
 	public  void launchSite()
 	{
-		
 		driver.get("https://www.ebay.com/");
 	}
 	public void closeDriver()

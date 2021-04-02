@@ -9,6 +9,7 @@ import com.uiPackage.EbayProductPage;
 public class MainEntry {
 
 	public static void main(String[] args) {
+		
 		WebDriver driver = BrowserSelector.getDriver("Chrome");
 		EbayHomePage homePage = PageFactory.initElements(driver, EbayHomePage.class);
 		homePage.launchSite();
@@ -21,5 +22,6 @@ public class MainEntry {
 		
 
 	}
+
 
 }

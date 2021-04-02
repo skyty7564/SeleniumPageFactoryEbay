@@ -20,6 +20,7 @@ public class BrowserSelectorTest {
 		EbayProductPage productPage = PageFactory.initElements(driver, EbayProductPage.class);
 		productPage.getProduct();
 		productPage.displayProduct();
+		driver.close();
 		
 
 		
