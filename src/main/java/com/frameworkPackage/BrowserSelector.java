@@ -20,12 +20,12 @@ public class BrowserSelector {
 		{
 			if(browserName.equalsIgnoreCase("chrome"))
 			{
-				System.setProperty("webdriver.chrome.driver", "D:\\EbayMaven\\src\\main\\resources\\chromedriver_win32\\chromedriver.exe");
+		//		System.setProperty("webdriver.chrome.driver", "D:\\EbayMaven\\src\\main\\resources\\chromedriver_win32\\chromedriver.exe");
 				driver = new ChromeDriver();
 			}
 			else if(browserName.equalsIgnoreCase("firefox"))
 			{
-				System.setProperty("webdriver.gecko.driver", "D:\\EbayMaven\\src\\main\\resources\\geckodriver-v0.29.0-win64\\geckodriver.exe");
+			//	System.setProperty("webdriver.gecko.driver", "D:\\EbayMaven\\src\\main\\resources\\geckodriver-v0.29.0-win64\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();
